@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <a href="/admin/posts.php">Мои посты</a>
+    <a href="/admin/create_post.php">Добавление</a>
+    <a href="/admin/delete_post.php">Удаление</a>
+    <a href="/admin/update_post.php">Изменение</a>
+    <br>
 </body>
+
 </html>
 <?php
 
@@ -22,12 +29,6 @@ $password = $_POST['password'];
     if (!$result) {
         die('Запрос не удался' . mysqli_error($connection));
     }else{
-        echo "Удалена запись";
+        echo "Удалена запись".'<br>';
     }
 ?>
-
-
-<a href="/admin/posts.php">Мои посты</a>
-<a href="/admin/create_post.php">Добавление</a>
-<a href="/admin/delete_post.php">Удаление</a>
-<a href="/admin/update_post.php">Изменение</a>

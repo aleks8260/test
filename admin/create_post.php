@@ -6,12 +6,14 @@ if(isset($_POST['submit'])){
     $name =$_POST['name'];
     $password =$_POST['password'];
     
-    $query = "INSERT INTO user(name,password) VALUES ('$name', '$password')";
+    $sql = "INSERT INTO user(name,password) VALUES ('$name', '$password')";
     
-    $result = mysqli_query($connection, $query);
+    $result = mysqli_query($connection, $sql);
     if(!$result) {
         die('Ошибка' . mysqli_error());
     
+    }else {
+        echo "Добавлены данные"; 
     }
 }
 ?>
@@ -39,7 +41,7 @@ if(isset($_POST['submit'])){
                             <label for="name">Password</label>
                             <input type="text" name="password">
                         </div>
-                        <input type="submit" name="submit">
+                        <input type="submit" name="submit" value="Создать">
                     </form>
                 </div>
                 <a href="/admin/posts.php">Мои посты</a>

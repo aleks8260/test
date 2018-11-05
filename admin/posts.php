@@ -27,7 +27,6 @@ if(!$result){
                     <a href="/admin/create_post.php">Добавление</a>
                     <a href="/admin/delete_post.php">Удаление</a>
                     <a href="/admin/update_post.php">Изменение</a>
-                   <!-- <h1><a href="create_post.php">Create post</a></h1>-->
                     <?php
         $query = "SELECT * FROM user";
 
@@ -40,9 +39,9 @@ if(!$result){
                         <table class="table table-bordered table-striped">
                             <tr>
                                 <td>id</td>
-                                <td>Name</td>
-                                <td>Password</td>
-                                <td>Upravlenie</td>
+                                <td>Имя</td>
+                                <td>Пароль</td>
+                                <td>Управление</td>
                             </tr>
                             <?php
 
@@ -61,8 +60,8 @@ if(!$result){
                                         <?= $row['password'];?>
                                     </td>
                                     <td>
-                                        <a class="btn btn-success" href="update_post.php?post_id=<?= $row['id'];?>">Edit</a>
-                                        <a class="btn btn-danger" href="delete_post.php?post_id=<?= $row['id'];?>">Delete</a>
+                                        <a class="btn btn-success" href="update_post.php?post_id=<?= $row['id'];?>">Изменить</a>
+                                        <a class="btn btn-danger" href="delete_post.php?post_id=<?= $row['id'];?>">Удалить</a>
                                     </td>
                                 </tr>
                                 <?
